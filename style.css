@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	height: -webkit-fill-available;
+	/* Tři nově přidaný sračky, kdyžtak smazat*/
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100%;
+  }
+
+:root{
+	--background-color: #000000;
+	--text-color: #ffffff;
+	--text-color-imp: #FFDD00;
+}
+
+body{
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.burger{
+	z-index: 3;
+	transform: rotate(0deg);
+	transition: all 0.2s;
+}
+
+.rotate{
+	transform: rotate(180deg);
+	transition: all 0.3s;
+}
+
+.cara{
+	width: 20px;
+	height: 3px;
+	background-color: var(--text-color-imp);
+	margin: 2px auto;
+}
+
+.dark{
+	background-color: var(--background-color);
+}
+
+.content{
+	font-family: "Archivo";
+	margin: 0 30px auto 30px;
+}
+
+  @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+	#web-nav{
+		display: block;	
+		margin: 0 auto;
+		padding: 30px 30px;
+	}
+	.sign{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo{
+		line-height: 0.9;
+	}
+	
+	.logo h1:nth-child(1){
+		font-family: "Archivo Black";
+		font-size: 9.3vw;
+		letter-spacing: -1px;
+	}
+	.logo h1:nth-child(2){
+		font-family: "Archivo Black";
+		font-size: 7vw;
+		font-weight: 500;
+		-webkit-text-stroke: 0.5px var(--text-color-imp);
+    	-webkit-text-fill-color: transparent;
+	}
+	#web-nav ul{
+		background-color: var(--text-color-imp);
+		list-style: none;
+	}
+	.nav-menu{
+		font-family: "Archivo Black";
+		z-index: 2;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		height: 0;
+		overflow: hidden;
+		transition: height 0.5s;
+	}
+	.nav-menu-center li a{
+		text-decoration: none;
+		font-size: 40px;
+		color: var(--background-color);
+	}
+	.show-nav{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		transition: height 0.5s;
+	}
+	.content{
+		overflow: hidden;
+	}
+	.intro-text{
+		font-size: 8vw;
+	}
+	#first{
+		color: var(--text-color-imp);
+	}
+	#second{
+		background: linear-gradient(0deg, rgba(66,255,0,1) 0%, rgba(255,214,0,1) 75%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.crop{
+		width: 100%;
+		overflow: hidden;
+		padding: 0px 0px 0px 30px;
+	}
+	.toyota{
+		margin: 20px auto;
+		border-radius: 20px 0px 0px 20px;
+		filter: brightness(55%);
+		width: 100%;
+	}
+	.fixed-prices{
+		font-size: 7.5vw;
+		text-align: center;
+	}
+	#third{
+		background: linear-gradient(0deg, rgba(66,255,0,1) 0%, rgba(255,214,0,1) 70%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	#fourth{
+		position: relative;
+		top: -15px;
+		font-size: 6.5vw;
+	}
+	.check-prices{
+		margin: 15px auto;
+		text-align: center;
+		color: #8C8C8C;
+	}
+	.check-prices button{
+		padding: 15px 40px;
+		border-radius: 40px;
+		border: 0px;
+		font-family: "Archivo";
+		font-weight: bold;
+	}
+	.check-prices button:nth-child(2){
+		background-color: transparent;
+		border: 2px solid white;
+		color: white;
+	}
+	.payments{
+		margin: 30px auto;
+		font-size: 8vw;
+	}
+	.napisy{
+		z-index: 2;
+	}
+	.napisy h2:nth-child(3){
+		font-size: 15vw;
+	}
+	.napisy p{
+		margin: 20px auto;
+		color: #8C8C8C;
+		font-size: 4vw;
+	}
+	.light{
+		position: relative;
+		top: -250px;
+	}
+	#fifth{
+		color: #BDFF00;
+	}
+	#sixth{
+		color: #FF3DD4;
+	}
+	#seventh{
+		color: #FFD600;
+		
+	}
+  }
+  
+  @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+	
+  }
+  
+  @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+  }
+  
+  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+	#web-nav{
+		display: flex;	
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	#web-nav ul{
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+	}
+	.burger{
+		display: none;
+	}
+	.nav-menu{
+		position: relative;
+		width: auto;
+		height: auto;
+	}
+	.nav-menu-center{
+		display: flex;
+		align-items: center;
+	}
+	.nav-menu-center li a{
+		padding: 10px 20px;
+		font-family: "Archivo";
+		text-decoration: none;
+		font-size: 20px;
+		color: var(--text-color);
+	}
+  }
+  
+  @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */   
+  }
+  
+  @media (min-width:1281px) { /* hi-res laptops and desktops */ 
+  }
+  
+  @media (min-width:1601px) { /* hi-res laptops and desktops */ 
+  }
