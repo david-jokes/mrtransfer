@@ -12,7 +12,7 @@ html{
 	margin: 0 !important;
 	padding: 0 !important;
 	height: 100%;
-  }
+}
 
 :root{
 	--background-color: #000000;
@@ -23,6 +23,7 @@ html{
 body{
 	background-color: var(--background-color);
 	color: var(--text-color);
+	transition: color 1s, background-color 1s;
 }
 
 .burger{
@@ -41,6 +42,7 @@ body{
 	height: 3px;
 	background-color: var(--text-color-imp);
 	margin: 2px auto;
+	transition: all 0.3s;
 }
 
 .dark{
@@ -49,14 +51,35 @@ body{
 
 .content{
 	font-family: "Archivo";
-	margin: 0 30px auto 30px;
+	margin: 0 10vw auto 10vw;
 }
+
+.light-mode{
+	background-color: white;
+	color: black;
+	transition: color 1s, background-color 1s;
+}
+
+.pokus{
+	color: black !important;
+	transition: color 1s;
+}
+
+.links{
+	transition: color 1s;
+}
+
+
+@media (min-width:320px)  {.light{position: absolute;top: 290vw;left: 40vw}}
+@media (min-width:480px)  {.light{position: absolute;top: 260vw;left: 40vw}}
+@media (min-width:600px)  {.light{position: absolute;top: 260vw;left: 40vw}}
+@media (min-width:750px)  {.light{position: absolute;top: 240vw;left: 40vw}}
 
   @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
 	#web-nav{
 		display: block;	
 		margin: 0 auto;
-		padding: 30px 30px;
+		padding: 15vw 10vw 10vw 10vw;
 	}
 	.sign{
 		display: flex;
@@ -77,7 +100,7 @@ body{
 		font-family: "Archivo";
 		font-weight: 900;
 		font-size: 7vw;
-		-webkit-text-stroke: 0.5px var(--text-color-imp);
+		-webkit-text-stroke: 1px var(--text-color-imp);
     	-webkit-text-fill-color: transparent;
 	}
 	#web-nav ul{
@@ -90,7 +113,7 @@ body{
 		z-index: 2;
 		
 		position: absolute;
-		top: 0;
+		top: -100vh;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
@@ -98,14 +121,17 @@ body{
 		justify-content: center;
 		align-items: center;
 		
-		height: 0;
 		overflow: hidden;
-		transition: height 0.5s;
+		transition: top 0.5s;
 	}
 	.nav-menu-center li a{
 		text-decoration: none;
 		font-size: 40px;
-		color: var(--background-color);
+		color: black;
+	}
+	.nav-menu-center li:last-child{
+		margin-top: 50px;
+		font-weight: 100;
 	}
 	.show-nav{
 		position: absolute;
@@ -113,7 +139,7 @@ body{
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		transition: height 0.5s;
+		transition: top 0.5s;
 	}
 	.content{
 		overflow: hidden;
@@ -132,7 +158,7 @@ body{
 	.crop{
 		width: 100%;
 		overflow: hidden;
-		padding: 0px 0px 0px 30px;
+		padding: 0px 0px 0px 10vw;
 	}
 	.toyota{
 		margin: 20px auto;
@@ -186,10 +212,6 @@ body{
 		color: #8C8C8C;
 		font-size: 4vw;
 	}
-	.light{
-		position: relative;
-		top: -250px;
-	}
 	#fifth{
 		color: #BDFF00;
 	}
@@ -197,8 +219,7 @@ body{
 		color: #FF3DD4;
 	}
 	#seventh{
-		color: #FFD600;
-		
+		color: #FFD600;	
 	}
   }
   
@@ -214,20 +235,35 @@ body{
 		display: flex;	
 		justify-content: space-between;
 		margin: 0 auto;
-		padding: 0 20px;
+		padding: 20px 10vw;
 	}
 	#web-nav ul{
 		background-color: transparent;
 		display: flex;
 		align-items: center;
 	}
+	.logo h1:nth-child(1){
+		font-family: "Archivo";
+		font-weight: 900;
+		font-size: 4vw;
+		letter-spacing: -1px;
+	}
+	.logo h1:nth-child(2){
+		font-family: "Archivo";
+		font-weight: 900;
+		font-size: 3vw;
+		-webkit-text-stroke: 1px var(--text-color-imp);
+    	-webkit-text-fill-color: transparent;
+	}
 	.burger{
 		display: none;
 	}
 	.nav-menu{
 		position: relative;
+		top: 0;
 		width: auto;
 		height: auto;
+		transition: top 0s;
 	}
 	.nav-menu-center{
 		display: flex;
@@ -237,8 +273,88 @@ body{
 		padding: 10px 20px;
 		font-family: "Archivo";
 		text-decoration: none;
-		font-size: 20px;
-		color: var(--text-color);
+		font-size: 15px;
+		color: white;
+	}
+	.nav-menu-center li:last-child{
+		margin-top: 0px;
+	}
+	.intro-text{
+		font-size: 6vw;
+	}
+	#first{
+		color: var(--text-color-imp);
+	}
+	#second{
+		background: linear-gradient(0deg, rgba(66,255,0,1) 0%, rgba(255,214,0,1) 75%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.crop{
+		width: 100%;
+		overflow: hidden;
+		padding: 0px 0px 0px 10vw;
+	}
+	.toyota{
+		margin: 20px auto;
+		border-radius: 20px 0px 0px 20px;
+		filter: brightness(55%);
+		width: 100%;
+	}
+	.fixed-prices{
+		font-size: 7.5vw;
+		text-align: center;
+	}
+	#third{
+		background: linear-gradient(0deg, rgba(66,255,0,1) 0%, rgba(255,214,0,1) 70%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	#fourth{
+		position: relative;
+		top: -15px;
+		font-size: 6.5vw;
+	}
+	.check-prices{
+		margin: 15px auto;
+		text-align: center;
+		color: #8C8C8C;
+	}
+	.check-prices button{
+		padding: 15px 40px;
+		border-radius: 40px;
+		border: 0px;
+		font-family: "Archivo";
+		font-weight: bold;
+	}
+	.check-prices button:nth-child(2){
+		background-color: transparent;
+		border: 2px solid white;
+		color: white;
+	}
+	.payments{
+		margin: 30px auto;
+		font-size: 8vw;
+	}
+	.napisy{
+		z-index: 2;
+	}
+	.napisy h2:nth-child(3){
+		font-size: 15vw;
+	}
+	.napisy p{
+		margin: 20px auto;
+		color: #8C8C8C;
+		font-size: 4vw;
+	}
+	#fifth{
+		color: #BDFF00;
+	}
+	#sixth{
+		color: #FF3DD4;
+	}
+	#seventh{
+		color: #FFD600;	
 	}
   }
   
@@ -246,6 +362,7 @@ body{
   }
   
   @media (min-width:1281px) { /* hi-res laptops and desktops */ 
+	
   }
   
   @media (min-width:1601px) { /* hi-res laptops and desktops */ 
